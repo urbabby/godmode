@@ -54,7 +54,7 @@ Do NOT use this skill for:
 ## Mandatory Guardrails (enforced by the module, not optional)
 
 - Dry-run is the default; sending is never automatic.
-- Real send requires: `approved` status + `--confirm-ok` + secrets file at `0600`.
+- Real send requires: `approved` status + `--confirm-ok` + secrets file **present** at `0600` (a missing file is refused explicitly — M7).
 - Attachments validated (PDF magic bytes + size) at draft **and** send time.
 - Recipient format-validated.
 - Duplicates blocked once a real `sent` exists.
